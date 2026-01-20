@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d1117;
+            color: white;
+        }
+
+        .container {
+            width: 85%;
+            display: grid;
+            grid-template-columns: 1.25fr 2fr;
+            align-items: center;
+            gap: 2rem;
+
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .content-heading {
+            font-size: 1.25rem;
+            font-weight: bolder;
+        }
+
+        .content-paragraph {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.595);
+        }
+
+        .language-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 1rem;
+        }
+
+        .languages {
+
+            font-size: 0.87rem;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="content-heading">Code in any language</div>
+            <div class="content-paragraph">Vs Code supports almost every major programming language. Several ship in the box, like JavaScript, TypeScript, CSS, and HTML, but extension for others can be found in the VS Code Marketplace</div>
+        </div>
+        <div class="language-container">
+            <div class="languages lang1">JavaScript</div>
+            <div class="languages lang2">TypeScript</div>
+            <div class="languages lang3">Python</div>
+            <div class="languages lang4">C#</div>
+            <div class="languages lang5">C++</div>
+            <div class="languages lang6">HTML</div>
+            <div class="languages lang7">Java</div>
+            <div class="languages lang8">JSON</div>
+            <div class="languages lang9">PHP</div>
+            <div class="languages lang10">Markdown</div>
+            <div class="languages lang11">Powershell</div>
+            <div class="languages lang12">YAML</div>
+        </div>
+    </div>
+</body>
+</html>
