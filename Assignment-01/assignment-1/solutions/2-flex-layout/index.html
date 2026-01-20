@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            display: flex;
+            width: 1200px;
+            height: 40px;
+        }
+
+        .box-1 {
+            width: 40%;
+            background: red;
+        }
+        
+        .box-2 {
+            width: 60%;
+            background: blue;
+        }
+
+        .box-1,
+        .box-2 {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-1">Left</div>
+        <div class="box-2">Right</div>
+    </div>
+</body>
+</html>
