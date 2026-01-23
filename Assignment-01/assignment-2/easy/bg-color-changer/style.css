@@ -1,67 +1,118 @@
 ::root {
-    background-color: --bg-color;
+  background-color: --bg-color;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    background-color: #212121;
+  height: 100vh;
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+    width: fit-content;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    position: fixed;
+    bottom: 10px;
+}
+
+.add-color-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.add-color {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    padding: 8px;
+    background-color: #e6e1e1;
+}
+
+.add-color img {
+    margin-bottom: -6px;
+}
+
+#input-color {
+    height: 40px;
+    width: 100px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+
+#input-color:focus {
+    outline: none;
 }
 
 .color-palette {
-    background: #ffffff6a;
-    position:fixed;
-    bottom: 0;
-    margin-bottom: 20px;
-    width: fit-content;
-    width: 500px; /*!*/
-    height: 50px;
-    border-radius: 20px;;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 3px 3px 10px -2px rgba(145, 142, 142, 0.512);
-    backdrop-filter: blur(50px);
+  background: #e6e1e1;
+  /* margin-bottom: 20px; */
+  width: 500px; /*!*/
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 15px -2px rgba(145, 142, 142, 0.512);
+  /* backdrop-filter: blur(50px); */
 }
 
 .color {
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 50%;
-    /* border-top-right-radius: 1px; */
-    /* corner-shape: round; */
-    corner-top-right-shape: scoop;
-    corner-top-left-shape: scoop;
-    corner-bottom-left-shape: scoop;
-    corner-bottom-right-shape: scoop;
-    position: relative;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  corner-shape: scoop;
+  position: relative;
+  outline: 1px groove rgba(0, 0, 0, 0.159);
+  outline-offset: -2px;
+  box-shadow: 0px 0px 3px 3px var(--bg-color);
+  z-index: 1;
 }
 
 .color::before {
-    content: "";
-    color: white;
-    position: absolute;
-    top: -6px;
-    left: -4px;
-    width: 40%;
-    height: 40%;
-    background-color: var(--bg-color);
-    opacity: 0.3;
-    border-radius: 50%;
-    corner-top-right-shape: scoop;
-    corner-top-left-shape: scoop;
-    corner-bottom-left-shape: scoop;
-    corner-bottom-right-shape: scoop;
-    transform: rotate(270deg);
-    z-index: -1;
+  content: "";
+  color: white;
+  position: absolute;
+  top: -6px;
+  left: -4px;
+  width: 50%;
+  height: 50%;
+  background-color: var(--bg-color);
+  opacity: 0.6;
+  border-radius: 50%;
+  corner-shape: scoop;
+  z-index: 0;
 }
 
+.color:hover::before {
+  animation: rotate 1.5s linear infinite;
+}
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.test {
+    display: none;
+}
