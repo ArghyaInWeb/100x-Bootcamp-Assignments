@@ -18,4 +18,38 @@ body  {
 
 .question-box {
     background-color: #5d5d5d;
+    padding: 50px 30px;
+    border-radius: 30px;
+    corner-shape: squircle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.question {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.options label {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+.submit-btn {
+    margin-top: 40px;
+    background-color: royalblue;
+    align-self: center;
+    padding: 10px 45px;
+    border-radius: 40px;
+    corner-shape: squircle;
 }

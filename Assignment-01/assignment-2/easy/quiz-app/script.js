@@ -55,7 +55,7 @@ function showResult() {
   let correctAnswers = 0;
 
   for(let i = 0; i < userAnswers.length; i++) {
-    if(userAnswers[i] === quizData[0].correct) {
+    if(userAnswers[i] === quizData[i].correct) {
         correctAnswers++
     }
   }
