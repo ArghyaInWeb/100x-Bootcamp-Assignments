@@ -1,10 +1,150 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Passero+One&display=swap");
+
+:root {
+  --type-normal-bg: #f2f2f2;
+  --type-normal-text: #5e5e5e;
+
+  --type-fire-bg: #ffe2d6;
+  --type-fire-text: #c23b22;
+
+  --type-water-bg: #ddebff;
+  --type-water-text: #1c4ed8;
+
+  --type-electric-bg: #fff5cc;
+  --type-electric-text: #b58900;
+
+  --type-grass-bg: #e3f5e1;
+  --type-grass-text: #2f7d32;
+
+  --type-ice-bg: #e6f7fa;
+  --type-ice-text: #007c91;
+
+  --type-fighting-bg: #f4d6d2;
+  --type-fighting-text: #8c1d18;
+
+  --type-poison-bg: #eadcf5;
+  --type-poison-text: #6b21a8;
+
+  --type-ground-bg: #f2e5c9;
+  --type-ground-text: #8a5a1e;
+
+  --type-flying-bg: #edf0ff;
+  --type-flying-text: #4a5ed6;
+
+  --type-psychic-bg: #ffe1ec;
+  --type-psychic-text: #c2185b;
+
+  --type-bug-bg: #eef6d8;
+  --type-bug-text: #5a7f1b;
+
+  --type-rock-bg: #e6e1d6;
+  --type-rock-text: #6b5b3e;
+
+  --type-ghost-bg: #e8e4f5;
+  --type-ghost-text: #4b3f72;
+
+  --type-dragon-bg: #e0e7ff;
+  --type-dragon-text: #3730a3;
+
+  --type-dark-bg: #e3e3e3;
+  --type-dark-text: #1f2937;
+
+  --type-steel-bg: #e7eef3;
+  --type-steel-text: #475569;
+
+  --type-fairy-bg: #fce7f3;
+  --type-fairy-text: #be185d;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #3c3c3cdf;
+  border-radius: 22px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pokemon-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-image-container img {
+  width: 170px;
+  height: 220px;
+}
+
+.pokemon-name {
+  font-size: 2rem;
+  font-family: "Passero One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.pokemon-types {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.type-styles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.65rem;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.pokemon-types .type1 {
+  background-color: var(--type-steel-bg);
+  color: var(--type-steel-text);
+  border: 2px solid var(--type-steel-text);
+}
+
+.pokemon-types .type2 {
+  background-color: var(--type-ghost-bg);
+  color: var(--type-ghost-text);
+  border: 2px solid var(--type-ghost-text);
+}
+
+.pokemon-details-section {
+  position: absolute;
+  bottom: -100px;
 }
